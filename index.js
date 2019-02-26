@@ -1,9 +1,11 @@
-'use strict'
+'use strict';
 
-import app from './app'
-import config from './config/config'
+const app = require('./app');
 
-app.listen(config.server.port, () => {
-  console.log(config.server.message)
-})
+require('dotenv').config();
 
+const port = process.env.PORT;
+
+app.listen(port, () => {
+  console.log(`Server running in the port ${port}`);
+});

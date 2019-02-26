@@ -1,13 +1,11 @@
-'use strict'
+'use strict';
 
-import express from 'express'
+const express = require('express');
+const app = express();
 
-const app = express()
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.use(express.json())
-app.use(express.urlencoded({ extended: false }))
+require('./routes/movie')(app);
 
-require('./routes/movie.routes')(app)
-
-module.exports = app
-
+module.exports = app;

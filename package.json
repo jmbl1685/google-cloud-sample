@@ -1,23 +1,29 @@
 {
-  "name": "structure-express-app",
+  "name": "google-cloud-sample",
   "version": "1.0.0",
-  "description": "",
+  "description": "Sample using Google Cloud Platform [Datastore]",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node index.js",
-    "dev": "nodemon index.js --exec babel-node",
-    "test": "nodemon test/mocha.test.js --exec mocha"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": {
+    "name": "Juan Manuel Batty Linero",
+    "email": "jmbl1685@hotmail.com",
+    "url": "https://juanbatty.com"
   },
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/datastore": "^1.4.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "celebrate": "^8.0.0",
-    "express": "^4.16.3",
-    "shortid": "^2.2.8"
+    "@google-cloud/datastore": "^3.1.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "joi": "^14.3.1",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
-    "nodemon": "^1.17.5"
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10"
   }
 }
