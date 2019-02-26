@@ -6,7 +6,7 @@ const Joi = require('joi');
 function ValidateSchema(json) {
   const schema = {
     name: Joi.string()
-      .min(5)
+      .min(2)
       .max(150)
       .required(),
     release: Joi.number()

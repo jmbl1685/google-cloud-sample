@@ -12,10 +12,14 @@ exports.ModelStateIsValid = (model, schema) => {
   };
 };
 
-exports.ErrorHandle = err => {
+exports.errorHandle = err => {
   return { error: err.message, status: 400 };
 };
 
-exports.StatusHandle = ({ status }) => {
+exports.statusHandle = ({ status }) => {
   return (status === undefined) | null ? 200 : status;
+};
+
+exports.movieResponseHandle = data => {
+  return data[0] === undefined ? { message: 'Movie not found' } : data[0];
 };

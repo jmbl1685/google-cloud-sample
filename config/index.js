@@ -3,7 +3,6 @@
 const { Datastore } = require('@google-cloud/datastore');
 
 require('dotenv').config();
-console.log(process.env.PRIVATE_KEY);
 
 const datastore = new Datastore({
   credentials: {
